@@ -1,3 +1,4 @@
+import { ENV } from './utils/env';
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -25,7 +26,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: 'https://opensource-demo.orangehrmlive.com',
+    baseURL: ENV.BASE_URL,
     trace: 'on-first-retry',
   },
 

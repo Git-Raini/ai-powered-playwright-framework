@@ -1,14 +1,19 @@
-import { test } from '@playwright/test';
+import { test } from '../fixtures/baseFixture';
 
-import { LoginPage } from '../pages/LoginPage';
+import { ENV } from '../utils/env';
 
-test('Verify user can login successfully', async ({ page }) => {
+test('Verify user can login successfully', async ({ loginPage }) => {
 
-    const loginPage = new LoginPage(page);
+    console.log(ENV.ORANGE_HRM_USERNAME);
+
+    console.log(ENV.ORANGE_HRM_PASSWORD);
 
     await loginPage.navigateToLoginPage();
 
-    await loginPage.login('Admin', 'admin123');
+    await loginPage.login(
+        ENV.ORANGE_HRM_USERNAME,
+        ENV.ORANGE_HRM_PASSWORD
+    );
 
     await loginPage.verifySuccessfulLogin();
 

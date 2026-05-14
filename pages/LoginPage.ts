@@ -39,7 +39,9 @@ export class LoginPage {
 
     async verifySuccessfulLogin() {
 
-        await expect(this.dashboardHeader).toContainText('Dashboard');
+    await this.page.waitForURL('**/dashboard/**');
 
-    }
+    await expect(this.page).toHaveURL(/dashboard/);
+
+}
 }
