@@ -1,3 +1,15 @@
+![Playwright](https://img.shields.io/badge/Playwright-Automation-green)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-Framework-blue)
+
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-black)
+
+![Allure Report](https://img.shields.io/badge/Allure-Reporting-orange)
+
+![API Testing](https://img.shields.io/badge/API-Testing-red)
+
+![AI Testing](https://img.shields.io/badge/AI-Assisted_Testing-purple)
+
 # AI-Powered Playwright Automation Framework
 
 Enterprise-grade Playwright + TypeScript automation framework designed for:
@@ -24,6 +36,7 @@ Enterprise-grade Playwright + TypeScript automation framework designed for:
 # Framework Features
 
 ## UI Automation
+
 - Page Object Model (POM)
 - Reusable Fixtures
 - Utility Layer
@@ -31,43 +44,72 @@ Enterprise-grade Playwright + TypeScript automation framework designed for:
 - Screenshot Utilities
 
 ## API Automation
+
 - GET API Validation
 - POST API Validation
 - Reusable API Client Layer
 - Response Assertions
 
 ## Reporting
+
 - Playwright HTML Reports
 - Allure Reports
 - Execution Traces
 
 ## CI/CD
+
 - GitHub Actions Integration
 - Automated Test Execution
 - Environment Secrets Handling
 
 ## AI-Assisted Testing
+
 - AI Prompt Library
 - AI Test Generation Workflow
 - Enterprise AI Testing Strategy
 
 ---
 
-# Framework Structure
+# Framework Architecture
 
 ```text
 ai-powered-playwright-framework/
 │
 ├── ai/
+│   ├── ai-prompts.md
+│   ├── ai-test-generation.md
+│   └── ai-testing-strategy.md
+│
 ├── api/
+│   ├── apiClient.ts
+│   ├── usersAPI.spec.ts
+│   └── createUserAPI.spec.ts
+│
 ├── fixtures/
+│   └── baseFixture.ts
+│
 ├── pages/
+│   ├── LoginPage.ts
+│   └── PIMPage.ts
+│
 ├── screenshots/
+│
 ├── test-data/
+│   ├── loginData.ts
+│   └── employeeData.ts
+│
 ├── tests/
+│   ├── login.spec.ts
+│   └── addEmployee.spec.ts
+│
 ├── utils/
+│   ├── dateUtils.ts
+│   ├── env.ts
+│   ├── randomUtils.ts
+│   └── screenshotUtils.ts
 │
 ├── .github/workflows/
+│   └── playwright.yml
 │
 ├── playwright.config.ts
 ├── package.json
@@ -156,9 +198,10 @@ npx allure open
 # GitHub Actions CI/CD
 
 This framework supports:
-- automated execution on push
+
+- Automated execution on push
 - GitHub Actions workflows
-- report artifact uploads
+- Report artifact uploads
 - CI/CD environment secrets
 
 ---
@@ -166,20 +209,23 @@ This framework supports:
 # AI Testing Capabilities
 
 This framework demonstrates:
+
 - AI-assisted test generation
-- prompt engineering for QA
+- Prompt engineering for QA
 - AI-based edge case identification
-- enterprise AI testing strategy
+- Enterprise AI testing strategy
 
 ---
 
 # Sample Automated Scenarios
 
-## UI
+## UI Scenarios
+
 - Login Validation
 - Employee Creation Workflow
 
-## API
+## API Scenarios
+
 - GET Users API
 - POST Create User API
 
@@ -196,8 +242,22 @@ This framework demonstrates:
 
 ---
 
+# Why This Framework?
+
+This framework demonstrates modern QA engineering practices including:
+
+- Scalable Playwright architecture
+- Enterprise automation design patterns
+- API + UI integrated automation
+- CI/CD pipeline implementation
+- AI-assisted QA workflows
+- Reusable framework utilities
+- Professional reporting and debugging
+
+---
+
 # Author
 
-Raini Desai
+## Raini Desai
 
 Senior QA Engineer | Automation | API Testing | AI-Assisted QA
