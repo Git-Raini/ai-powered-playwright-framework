@@ -14,6 +14,10 @@ jobs:
   playwright-tests:
 
     runs-on: ubuntu-latest
+      env:
+      BASE_URL: ${{ secrets.BASE_URL }}
+      ORANGE_HRM_USERNAME: ${{ secrets.ORANGE_HRM_USERNAME }}
+      ORANGE_HRM_PASSWORD: ${{ secrets.ORANGE_HRM_PASSWORD }}
 
     steps:
 
