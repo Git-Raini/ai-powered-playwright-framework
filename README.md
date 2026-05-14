@@ -72,6 +72,10 @@ Enterprise-grade Playwright + TypeScript automation framework designed for:
 
 # Framework Architecture
 
+## Architecture Diagram
+
+![Framework Architecture](docs/framework-architecture.png)
+
 ```text
 ai-powered-playwright-framework/
 │
