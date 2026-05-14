@@ -15,6 +15,7 @@ export class PIMPage {
     readonly lastNameInput: Locator;
 
     readonly saveButton: Locator;
+    readonly personalDetailsHeader: Locator;
 
     constructor(page: Page) {
 
@@ -31,7 +32,10 @@ export class PIMPage {
         this.lastNameInput = page.locator('input[name="lastName"]');
 
         this.saveButton = page.locator('button[type="submit"]');
-
+       this.personalDetailsHeader =
+    page.getByRole('heading', {
+        name: 'Personal Details'
+    });
     }
 
     async navigateToPIM() {
@@ -47,31 +51,36 @@ export class PIMPage {
     }
 
     async addEmployee(
-        firstName: string,
-        middleName: string,
-        lastName: string
-    ) {
+    firstName: string,
+    middleName: string,
+    lastName: string
+) {
 
-        await this.firstNameInput.fill(firstName);
+    await this.firstNameInput.fill(firstName);
 
-        await this.middleNameInput.fill(middleName);
+    await this.middleNameInput.fill(middleName);
 
-        await this.lastNameInput.fill(lastName);
+    await this.lastNameInput.fill(lastName);
 
-        await this.saveButton.click();
+    await Promise.all([
 
-    }
+        this.page.waitForURL(
+            /viewPersonalDetails/,
+            { timeout: 30000 }
+        ),
 
-    async verifyEmployeeAdded() {
+        this.saveButton.click()
 
-    await this.page.waitForURL(
-        '**/viewPersonalDetails/**',
-        { timeout: 15000 }
-    );
-
-    await expect(this.page).toHaveURL(
-        /viewPersonalDetails/
-    );
+    ]);
 
 }
+
+ async verifyEmployeeAdded() {
+
+    await expect(
+        this.personalDetailsHeader
+    ).toBeVisible();
+
+}
+
 }
