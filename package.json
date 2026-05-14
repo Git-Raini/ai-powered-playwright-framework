@@ -1,0 +1,14 @@
+{
+  "name": "ai-powered-playwright-framework",
+  "version": "1.0.0",
+  "description": "An advanced end-to-end testing framework built on Playwright, integrated with AI to enable self-healing locators, intelligent test generation, and automated failure analysis for modern web applications.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0"
+  }
+}
