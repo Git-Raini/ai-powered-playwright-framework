@@ -3,7 +3,7 @@ import { test } from '../fixtures/baseFixture';
 import { ENV } from '../utils/env';
 import { captureScreenshot } from '../utils/screenshotUtils';
 
-test('Verify user can login successfully', async ({ loginPage, page }) => {
+test('@smoke Verify user can login successfully', async ({ loginPage, page }) => {
 
     console.log(ENV.ORANGE_HRM_USERNAME);
 

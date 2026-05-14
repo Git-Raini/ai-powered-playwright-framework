@@ -5,8 +5,7 @@ import { APIClient } from './apiClient';
 import { generateRandomString }
 from '../utils/randomUtils';
 
-test(
-    'Verify user can be created successfully',
+test('@api Verify user can be created successfully',
 
     async ({ request }) => {
 

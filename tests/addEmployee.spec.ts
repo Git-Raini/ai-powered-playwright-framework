@@ -4,7 +4,7 @@ import { loginData } from '../test-data/loginData';
 
 import { employeeData } from '../test-data/employeeData';
 
-test('Verify admin can add employee successfully',
+test('@regression Verify admin can add employee successfully',
 
 async ({ loginPage, pimPage }) => {
 

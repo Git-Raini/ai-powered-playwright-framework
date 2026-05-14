@@ -2,8 +2,7 @@ import { test, expect } from '@playwright/test';
 
 import { APIClient } from './apiClient';
 
-test(
-    'Verify users API returns successful response',
+test('@api Verify users API returns successful response',
 
     async ({ request }) => {
 
